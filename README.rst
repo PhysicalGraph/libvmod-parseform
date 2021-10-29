@@ -2,7 +2,7 @@
 fork of vmod-parseform
 ===============
 
-The branches master & varnish61 are for tracking upstream changes.
+The branches master & varnish61 are for tracking upstream changes main is not tracking upstream.
 
 -------------------------------
 Parse to POST request
