@@ -1,10 +1,8 @@
-.. image:: https://travis-ci.org/xcir/libvmod-parseform.svg?branch=master
-    :target: https://travis-ci.org/xcir/libvmod-parseform
-
 ===============
-vmod-parseform
+fork of vmod-parseform
 ===============
 
+The branches master & varnish61 are for tracking upstream changes.
 
 -------------------------------
 Parse to POST request
