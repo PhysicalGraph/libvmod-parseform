@@ -4,6 +4,11 @@ auth: &auth
     username: $ARTIFACTORY_USERNAME
     password: $ARTIFACTORY_PASSWORD
 
+dockerauth: &dockerauth
+  auth:
+    username: $DOCKER_USERNAME
+    password: $DOCKER_PASSWORD
+
 references:
   workspace_root: &workspace_root
                     ~/libvmod-parseform
@@ -15,7 +20,7 @@ jobs:
   write-version:
     docker:
       - image: "ubuntu:bionic"
-        <<: *auth
+        <<: *dockerauth
     working_directory: ~/libvmod-parseform
     steps:
       - checkout
@@ -30,7 +35,7 @@ jobs:
   build-parseform:
     docker:
       - image: "ubuntu:bionic"
-        <<: *auth
+        <<: *dockerauth
     working_directory: ~/libvmod-parseform
     steps:
       - checkout
@@ -67,7 +72,7 @@ jobs:
   varnish-parseform-deb:
     docker:
       - image: "tenzer/fpm:no-entrypoint"
-        <<: *auth
+        <<: *dockerauth
     working_directory: ~/libvmod-parseform
     steps:
       - checkout
