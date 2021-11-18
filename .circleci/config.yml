@@ -5,9 +5,9 @@ auth: &auth
     password: $ARTIFACTORY_PASSWORD
 
 dockerauth: &dockerauth
-   auth:
-     username: $DOCKER_USERNAME
-     password: $DOCKER_PASSWORD
+  auth:
+    username: $DOCKER_USERNAME
+    password: $DOCKER_PASSWORD
 
 references:
   workspace_root: &workspace_root
