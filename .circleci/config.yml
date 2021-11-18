@@ -15,7 +15,6 @@ jobs:
   write-version:
     docker:
       - image: "ubuntu:bionic"
-        <<: *auth
     working_directory: ~/libvmod-parseform
     steps:
       - checkout
@@ -30,7 +29,6 @@ jobs:
   build-parseform:
     docker:
       - image: "ubuntu:bionic"
-        <<: *auth
     working_directory: ~/libvmod-parseform
     steps:
       - checkout
@@ -67,7 +65,6 @@ jobs:
   varnish-parseform-deb:
     docker:
       - image: "tenzer/fpm:no-entrypoint"
-        <<: *auth
     working_directory: ~/libvmod-parseform
     steps:
       - checkout
