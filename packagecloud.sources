@@ -1,2 +1,0 @@
-deb https://packagecloud.io/varnishcache/varnish60lts/ubuntu/ bionic main
-deb-src https://packagecloud.io/varnishcache/varnish60lts/ubuntu/ bionic main
