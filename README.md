@@ -4,6 +4,10 @@ See [UPSTREAM.rst](UPSTREAM.rst) for the original upstream README.
 
 Some SmartThings services depend on the [libvmod-parseform](https://github.com/xcir/libvmod-parseform) library.  We maintain SmartThings-specific changes to the library, not all of which have necessarily been integrated into the upstream repository.
 
+## Versioning Standard
+
+This repo is tagged as `v<upstream>-st<release>`, where `<upstream>` is the most recent upstream tag and `<release>` is the sequentially-numbered SmartThings release.  So, `v62.6-st1` is the first SmartThings release after upstream `v62.6`.
+
 ## History
 
 When authvarnish was originally being developed in 2020, there was a problem with varnish repeatedly crashing due to a segmentation fault.  The root cause was traced back to a problem with the way certain headers were being handled &mdash; Akka apparently does something a little unusual with these headers, which triggered the behavior.
